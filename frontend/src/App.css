@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+header {
+  background: #1e3a8a;
+  color: white;
+  padding: 30px 8%;
+}
+
+header h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #dbeafe;
+}
+
+main {
+  width: 85%;
+  max-width: 1100px;
+  margin: 35px auto;
+}
+
+.form-section,
+.students-section {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px #00000010;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.message {
+  margin-top: 15px;
+  color: #15803d;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  background: #eff6ff;
+  color: #1e3a8a;
+}
+
+.delete-button {
+  background: #dc2626;
+}
+
+.delete-button:hover {
+  background: #b91c1c;
+}
