@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API = "http://127.0.0.1:5000";
+const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -26,8 +26,25 @@ function App() {
   };
 
   useEffect(() => {
-    loadStudents();
-  }, []);
+  let ignore = false;
+
+  axios
+    .get(`${API}/students`)
+    .then((response) => {
+      if (!ignore) {
+        setStudents(response.data);
+      }
+    })
+    .catch(() => {
+      if (!ignore) {
+        setMessage("Cannot connect to backend.");
+      }
+    });
+
+  return () => {
+    ignore = true;
+  };
+}, []);
 
   // Handle input changes
   const handleChange = (e) => {

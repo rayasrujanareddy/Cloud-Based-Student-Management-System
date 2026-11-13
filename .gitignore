@@ -14,3 +14,13 @@ frontend/dist/
 # Editor files
 .vscode/
 .DS_Store
+
+# Local environment files
+frontend/.env
+frontend/.env.local
+frontend/.env.production.local
+
+# Python environment
+.venv/
+venv/
+frontend/.env.production
